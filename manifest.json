@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Chromium SHA1 Linker Extension",
+  "version": "1.0",
+  "description": "Converts SHA1 hashes on Chromium Gerrit into clickable links.",
+  "permissions": [],
+  "host_permissions": [
+    "https://chromium-review.googlesource.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://chromium-review.googlesource.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
